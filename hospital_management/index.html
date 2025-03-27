@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 30px;
+        }
+        .card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hospital System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#patients">Patients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#doctors">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#appointments">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#departments">Departments</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to Our Hospital</h1>
+            <p class="lead">Comprehensive healthcare services with state-of-the-art facilities</p>
+            <a href="#appointments" class="btn btn-primary btn-lg">Book an Appointment</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Patients Section -->
+        <section id="patients" class="my-5">
+            <h2 class="text-center mb-4">Patients</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-info text-white">
+                            <h5>Patient Records</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Age</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>P001</td>
+                                        <td>John Smith</td>
+                                        <td>35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>P002</td>
+                                        <td>Sarah Johnson</td>
+                                        <td>28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>P003</td>
+                                        <td>Michael Brown</td>
+                                        <td>42</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-info">View All Patients</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-info text-white">
+                            <h5>Add New Patient</h5>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="patientName" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="patientName">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="patientAge" class="form-label">Age</label>
+                                    <input type="number" class="form-control" id="patientAge">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="patientAddress" class="form-label">Address</label>
+                                    <textarea class="form-control" id="patientAddress" rows="2"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Register Patient</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section id="doctors" class="my-5">
+            <h2 class="text-center mb-4">Doctors</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2" class="card-img-top" alt="Doctor">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Emily Wilson</h5>
+                            <p class="card-text">Cardiology</p>
+                            <p class="card-text"><small class="text-muted">10 years experience</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d" class="card-img-top" alt="Doctor">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. James Rodriguez</h5>
+                            <p class="card-text">Neurology</p>
+                            <p class="card-text"><small class="text-muted">15 years experience</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f" class="card-img-top" alt="Doctor">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Sarah Chen</h5>
+                            <p class="card-text">Pediatrics</p>
+                            <p class="card-text"><small class="text-muted">8 years experience</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointments Section -->
+        <section id="appointments" class="my-5">
+            <h2 class="text-center mb-4">Appointments</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <h5>Schedule Appointment</h5>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="appointmentPatient" class="form-label">Patient</label>
+                                    <select class="form-select" id="appointmentPatient">
+                                        <option selected>Select Patient</option>
+                                        <option>John Smith (P001)</option>
+                                        <option>Sarah Johnson (P002)</option>
+                                        <option>Michael Brown (P003)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="appointmentDoctor" class="form-label">Doctor</label>
+                                    <select class="form-select" id="appointmentDoctor">
+                                        <option selected>Select Doctor</option>
+                                        <option>Dr. Emily Wilson (Cardiology)</option>
+                                        <option>Dr. James Rodriguez (Neurology)</option>
+                                        <option>Dr. Sarah Chen (Pediatrics)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="appointmentDate" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="appointmentDate">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="appointmentTime" class="form-label">Time</label>
+                                    <input type="time" class="form-control" id="appointmentTime">
+                                </div>
+                                <button type="submit" class="btn btn-success">Book Appointment</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <h5>Upcoming Appointments</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">John Smith with Dr. Emily Wilson</h6>
+                                        <small>Tomorrow</small>
+                                    </div>
+                                    <p class="mb-1">10:30 AM - Cardiology</p>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Sarah Johnson with Dr. Sarah Chen</h6>
+                                        <small>In 2 days</small>
+                                    </div>
+                                    <p class="mb-1">2:15 PM - Pediatrics</p>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Michael Brown with Dr. James Rodriguez</h6>
+                                        <small>Next week</small>
+                                    </div>
+                                    <p class="mb-1">9:00 AM - Neurology</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Departments Section -->
+        <section id="departments" class="my-5">
+            <h2 class="text-center mb-4">Departments</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-heartbeat fa-3x text-danger mb-3"></i>
+                            <h5 class="card-title">Cardiology</h5>
+                            <p class="card-text">Heart and cardiovascular system care</p>
+                            <a href="#" class="btn btn-outline-danger">View Doctors</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-brain fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Neurology</h5>
+                            <p class="card-text">Brain and nervous system specialists</p>
+                            <a href="#" class="btn btn-outline-primary">View Doctors</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-baby fa-3x text-warning mb-3"></i>
+                            <h5 class="card-title">Pediatrics</h5>
+                            <p class="card-text">Healthcare for infants and children</p>
+                            <a href="#" class="btn btn-outline-warning">View Doctors</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Billing Section -->
+        <section id="billing" class="my-5">
+            <h2 class="text-center mb-4">Billing</h2>
+            <div class="card">
+                <div class="card-header bg-warning">
+                    <h5>Patient Bills</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Bill ID</th>
+                                <th>Patient</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>B001</td>
+                                <td>John Smith</td>
+                                <td>$250.00</td>
+                                <td><span class="badge bg-success">Paid</span></td>
+                            </tr>
+                            <tr>
+                                <td>B002</td>
+                                <td>Sarah Johnson</td>
+                                <td>$180.00</td>
+                                <td><span class="badge bg-danger">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>B003</td>
+                                <td>Michael Brown</td>
+                                <td>$320.50</td>
+                                <td><span class="badge bg-danger">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2023 Hospital Management System. All rights reserved.</p>
+            <p>Contact: info@hospital.com | Phone: (123) 456-7890</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
